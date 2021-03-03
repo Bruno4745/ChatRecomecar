@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="autoScroll" >
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" type="text/css"href="./public/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./public/styles/index.css">
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading" id="accordion">
+        <div class="row" style="padding: 0; margin: 0;">
+            <div>
+                <div class="panel">
+                    <div class="panel-heading" id="accordion" style="background-color: rgb(149, 39, 144); color: white;">
                         <span class="glyphicon glyphicon-comment"></span> Chat
-                        <div class="btn-group pull-right">
+                        <!-- <div class="btn-group pull-right">
                             <a id="toggle-btn"type="button" class="btn btn-default btn-xs"
                              data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div class="collapse"id="collapseOne">
+                    <!-- <div class="collapse"id="collapseOne">
                       <div class="input-group">
                       <input type="text" id="input-name" class="form-control input-sm"
                       name="Name" value="Anonymous"placeholder="Change your username...">
@@ -31,61 +30,51 @@
                           <button class="btn btn-info btn-sm" id="btn-chat"onclick="ChangeName()">Change</button>
                       </span>
                       </div>
-                    </div>
+                    </div> -->
 
-                <div class="panel-collapse ">
+                <div class="panel-collapse">
                     <div class="panel-body">
-                        <ul class="chat"id="chat-list"style="list-style:none;padding-bottom:10%">
-                            <li class="left clearfix"hidden="true"id="You"style="padding-right:10%;margin-bottom:2%">
-                                <div class="chat-body clearfix pull-left"style="border:solid cornflowerblue 2px;
-                                      border-radius:15%;border-top-left-radius: 0;padding:2%;">
-                                    <div class="header">
+                        <ul class="chat" id="chat-list" style="list-style:none;padding-bottom:10%; padding-inline-start:0px">
+                            <li class="left clearfix" hidden="true" id="You" style="padding-right:2px;margin-bottom:2%">
+                                <div class="chat-body clearfix pull-left">
+                                    <!-- <div class="header">
                                       <span class="chat-img pull-left">
                                           <img src="http://placehold.it/50/55C1E7/fff&text=U"
                                           alt="User Avatar" class="img-circle" />
                                       </span>
-                                        <strong class="primary-font"id="sender">Jack Sparrow</strong>
-                                    </div>
-                                    <p class="">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                                        dolor, quis ullamcorper ligula sodales.
-                                    </p>
-                                    <small class="text-muted pull-right">
-                                      <span class="glyphicon glyphicon-time"></span></small>
+                                        <strong class="primary-font"id="sender" style="color: rgb(149, 39, 144);"></strong>
+                                    </div> -->
+                                    <p class="" style="color: rgb(2, 155, 124);"></p>
+                                    <!-- <small class="text-muted pull-right">
+                                    </small> -->
                                 </div>
                             </li>
-                            <li class="right clearfix"hidden="true"id="Me"style="padding-left:10%;margin-bottom:2%">
-                                <div class="chat-body clearfix pull-right"
-                                    style="width: auto;display: inline-block;border:solid dodgerblue 2px;
-                                    border-radius:15%;border-top-right-radius: 0;padding:2%;">
-                                    <div class="header">
+                            <li class="right clearfix" hidden="true" id="Me" style="padding-left:2px;margin-bottom:2%">
+                                <div class="chat-body clearfix pull-right" style="text-align: end;">
+                                    <!-- <div class="header">
                                       <span class="chat-img pull-right">
                                           <img src="http://placehold.it/50/FA6F57/fff&text=ME"
                                           alt="User Avatar" class="img-circle" />
                                       </span>
-                                        <strong class="pull-right primary-font"id="uname"></strong><br>
-                                    </div>
-                                    <p class="">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                                        dolor, quis ullamcorper ligula sodales.
-                                    </p>
-                                    <small class="pull-right text-muted"><span class="glyphicon glyphicon-time"></span></small>
+                                        <strong class="pull-right primary-font"id="uname" style="color: rgb(119, 253, 224);"></strong><br>
+                                    </div> -->
+                                    <p class="" style="color: rgb(149, 39, 144);"></p>
+                                    <!-- <small class="pull-right text-muted"></small> -->
                                 </div>
                             </li>
 
-                            <li class="text-center"id="New_Joined"hidden="true"style="padding:0%;margin-bottom:2%">
-                              <p class="text-center"style="background-color:dodgerblue;padding: 1.5%;
-                                border-radius: 10%;width: auto;display: inline-block;color:white">
+                            <li class="text-center" id="New_Joined" hidden="true" style="padding:0%;margin-bottom:2%">
+                              <p class="text-center" style="background-color:rgb(2,155,124);padding: 5px 10px;
+                                border-radius: 10px;width: auto;display: inline-block;color:white">
                               </p>
                             </li>
                         </ul>
                     </div>
-                    <div class="panel-footer">
+                    <div class="panel-footer" style="background-color: #fff;">
                         <div class="input-group">
-                            <input id="btn-input" type="text" class="form-control input-sm"
-                            placeholder="Type your message here..." />
+                            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Digite sua mensagem" />
                             <span class="input-group-btn">
-                                <button class="btn btn-warning btn-sm" id="btn-chat"onclick="SendMsg()">Send</button>
+                                <button class="btn btn-sm" id="btn-chat" onclick="SendMsg()" style="color: rgb(149, 39, 144);">Enviar</button>
                             </span>
                         </div>
                     </div>
@@ -93,7 +82,6 @@
               </div><!-- End Div panel-primary-->
             </div><!-- End Div col-md-12-->
         </div><!-- End Div row-->
-    </div><!-- End Div container-->
 
   </body>
 </html>
@@ -122,14 +110,14 @@
       localMsgPush();
     }
 
-    function ChangeName(){
-      console.log($('#input-name').val());
-      name=$('#input-name').val()
-      socket.emit('change_name',{
-        username:$('#input-name').val()
-      })
-      $('#toggle-btn').click();
-    }
+    // function ChangeName(){
+    //   console.log($('#input-name').val());
+    //   name=$('#input-name').val()
+    //   socket.emit('change_name',{
+    //     username:$('#input-name').val()
+    //   })
+    //   $('#toggle-btn').click();
+    // }
     function localMsgPush(){
       var ul = document.getElementById("chat-list");
       var cloone=$('#chat-list').find('#Me').clone(true);
@@ -140,7 +128,7 @@
       cloone.appendTo('#chat-list');
       console.log(cloone);
       $('#btn-input').val('');
-
+      updateScroll();
     }
     socket.on('new_msg_all',(data)=>{
       console.log(data);
@@ -152,6 +140,7 @@
       cloone.removeAttr('hidden');
       cloone.appendTo('#chat-list');
       console.log(cloone);
+      updateScroll();
     })
 
     socket.on('joined_room',(data)=>{
@@ -161,5 +150,11 @@
       cloone.removeAttr('hidden');
       cloone.appendTo('#chat-list');
       console.log(cloone);
+      updateScroll();
     })
+
+    function updateScroll(){
+        var element = document.getElementById("autoScroll");
+        element.scrollTop = element.scrollHeight;
+    }
     </script>
